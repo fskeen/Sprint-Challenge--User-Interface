@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+
+
+/* CODE STARTS HERE */
+
 * {
     box-sizing: border-box;
 }
@@ -54,6 +58,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,6 +69,35 @@ h1, h2, h3, h4, h5 {
 
 p {
     line-height: 1.4;
+}
+
+
+/*  */
+
+.container .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px 0px;
+    padding-right: 50px;
+}
+
+.container .navbar a {
+    text-decoration: none;
+    color: black;
+    transition: color .3s ease,
+                font-weight .3s ease,
+                font-size: .3s ease;
+}
+
+.container .navbar a:hover {
+    color: crimson;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.banner-img {
+    margin-bottom: 30px;
 }
 
 .container {
@@ -84,6 +118,19 @@ p {
     padding: 0 1%;
     padding-bottom: 20px;  
 }
+
+.top-content-about {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.top-content-about .text-container {
+    padding: 0 1%;
+    padding-bottom: 20px;  
+}
+
+
+/* MIDDLE & MAIN CONTENT */
 
 .middle-content {
     margin-bottom: 20px;
@@ -112,6 +159,118 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box:nth-of-type(1) {
+    background-color: teal;
+}
+
+.middle-content .boxes .box:nth-of-type(2) {
+    background-color: gold;
+}
+
+.middle-content .boxes .box:nth-of-type(3) {
+    background-color: cadetblue;
+}
+
+.middle-content .boxes .box:nth-of-type(4) {
+    background-color: coral;
+}
+
+.middle-content .boxes .box:nth-of-type(5) {
+    background-color: crimson;
+}
+
+.middle-content .boxes .box:nth-of-type(6) {
+    background-color: forestgreen;
+}
+
+.middle-content .boxes .box:nth-of-type(7) {
+    background-color: darkorchid;
+}
+
+.middle-content .boxes .box:nth-of-type(8) {
+    background-color: hotpink;
+}
+
+.middle-content .boxes .box:nth-of-type(9) {
+    background-color: indigo;
+}
+
+.middle-content .boxes .box:nth-of-type(10) {
+    background-color: dodgerblue;
+}
+
+.middle-content-about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.middle-content-about .about-box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 45%;
+    margin: 15px 0px;
+    border-bottom: 1px dashed black;
+}
+
+.middle-content-about .about-box h2 {
+    margin-top: 20px;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 130px;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+
+/* MAIN CONTENT ANIMATIONS */
+
+@keyframes hoverBounce {
+    0% {
+        transform: scale(1.02);
+        transform: rotate(2deg);
+    }
+    40% {
+        transform: scale(1.06);
+        transform: rotate(6deg);
+    }
+    60% {
+        transform: scale(1.06);
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1.06);
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: scale(1.06);
+        transform: rotate(0deg);
+    }
+}
+
+.hover-anim {
+    transition: background-color .2s ease,
+                border: .2s ease;
+
+
+}
+
+.hover-anim:hover {
+    animation: hoverBounce .2s;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 5px 5px 5px #adcad6;
+    border: gold 2px solid;
+}
+
+/* BOTTOM AND FOOTER */
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -124,6 +283,10 @@ p {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+.bottom-content .text-container-about {
+    margin: 30px 0px;
 }
 
 footer {
